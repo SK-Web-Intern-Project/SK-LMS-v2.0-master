@@ -1,6 +1,6 @@
 const PrivacyPolicyArticle = (props) => {
   return (
-    <p className="text-lightGray hover:text-heading">
+    <p className="text-lightGray hover:text-heading text-justify p-5">
 PRIVACY POLICY
 <br />
 <br />
