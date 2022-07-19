@@ -269,13 +269,14 @@ const Solutions = () => {
             id="partners"
             className="lg:text-right lg:w-1/2 xs:w-full lg:text-6xl reno:text-6xl md:text-6xl sm:text-4xl xs:text-4xl xxs:text-4xl font-semibold text-heading p-10"
           >
-            <span className="reno:block lg:hidden text-skBlue">
-              Our Product
-            </span>
-            <span className="text-skBlue lg:block reno:hidden md:hidden sm:hidden xs:hidden xxs:hidden">
-              Our
-              <br />
-              Product
+             <span className="reno:block lg:hidden text-skBlue">Our Product</span>
+            <span className="text-skBlue lg:block reno:hidden md:hidden sm:hidden xs:hidden xxs:hidden"> Our Product
+            
+            <br/>
+            
+            <img src='/06-vrbox-bgremoved.png' width="600" height="300"/> 
+
+
             </span>
           </h6>
           <div className="lg:w-1/2 reno:w-full md:w-full sm:w-full xs:w-full xxs:w-full lg:px-0 md:px-20 reno:px-52 flex flex-wrap lg:pb-0 reno:pb-10 md:pb-10 sm:pb-10 xs:pb-10 xxs:pb-10">

@@ -276,7 +276,7 @@ export default function Home(props) {
           </h4>
           <br />
           <br />
-          <p className="lg:text-2xl md:text-lg xs:text-base xxs:text-base">
+          <p className="lg:text-2xl text-justify md:text-lg xs:text-base xxs:text-base">
             Educator and physicist Anna Marie Benzon launched Stock Knowledge to
             focus on how young learners could foster better appreciation for
             their school subjects after realizing that traditional methods were
