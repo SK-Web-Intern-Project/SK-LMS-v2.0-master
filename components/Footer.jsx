@@ -20,19 +20,19 @@ const Footer = (props) => {
             Privacy Policy & Terms
           </a>
           <div className="flex align-center space-x-4">
-            <a href="https://www.facebook.com/StockKnowledgetool">
+            <a href="https://www.facebook.com/StockKnowledgetool" target = "_blank">
               <img src="/images/facebook.svg" />
             </a>
-            <a href="https://twitter.com/stockknowledge_">
+            <a href="https://twitter.com/stockknowledge_" target = "_blank">
               <img src="/images/twitter.svg" />
             </a>
-            <a href="https://www.instagram.com/stockknowledgetool/">
+            <a href="https://www.instagram.com/stockknowledgetool/" target = "_blank">
               <img src="/images/instagram.svg" />
             </a>
-            <a href="https://www.linkedin.com/company/stock-knowledge">
+            <a href="https://www.linkedin.com/company/stock-knowledge" target = "_blank">
               <img src="/images/linkedin.svg" />
             </a>
-            <a href="https://stock-knowledge-engineering.github.io/">
+            <a href="https://stock-knowledge-engineering.github.io/" target = "_blank">
               <img src="/images/github.svg" />
             </a>
           </div>
