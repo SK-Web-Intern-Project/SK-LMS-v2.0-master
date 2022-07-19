@@ -93,7 +93,30 @@ export default function Home(props) {
     if (user.isLogin && user.data && !user.data.verified)
       setLoginModalOpen(true);
   }, [user]);
+  function funcContactUs(){
+    var givenName = document.getElementById('givName').value;
+    var givenEmail = document.getElementById('givEmail').value;
+    var givenMessage = document.getElementById('givMessage').value;
+    var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (givenName == ""){
+      alert("Please input name");
+    }
+    if (!givenEmail.match(emailRegex)||givenEmail == ""){
+      if (givenEmail == ""){
+        alert("Please input E-mail");
+      }
+      else{
+        alert("Invalid Email. Please input a valid E-mail");
+      }
+    }
+    if (givenMessage==""){
+      alert("Please input message");
+    }
+    if (givenEmail.match(emailRegex) && givenName !="" && givenMessage != ""){
+      setToSubmit(true);
+    }
 
+  }
   useEffect(() => {
     if (requestData) {
       setToSubmit(false);
@@ -345,11 +368,12 @@ export default function Home(props) {
           </span>
         </h6>
         <div className="lg:w-3/4 reno:w-full md:w-full sm:w-full xs:w-full xxs:w-full lg:px-0 md:px-20 reno:px-52 flex justify-around flex-wrap lg:pb-0 reno:pb-10 md:pb-10 sm:pb-10 xs:pb-10 xxs:pb-10">
-          <img className="w-40 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/unicef.svg" />
-          <img className="transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/QBO.svg" />
-          <img className="transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/AIM.svg" />
-          <img className="w-24 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/deped-manila.svg" />
-          <img className="w-24 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/deped-makati.svg" />
+          <img className="ml-10 mr-4 w-40 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/unicef.svg" />
+          <img className="mr-4 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/QBO.svg" />
+          <img className="ml-4 mr-8 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/AIM.svg" />
+          <img className="w-24 mr-2 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/deped-manila.svg" />
+          <img className="w-24 ml-4 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/deped-makati.svg" />
+          <img className="w-24 ml-6 transform hover:bg-transparent transition duration-500 hover:scale-105" src="/images/aws_logo.svg" />
         </div>
       </div>
       <div
@@ -418,6 +442,8 @@ export default function Home(props) {
                   Name:
                 </label>
                 <input
+                  id="givName"
+                  name="givName"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full text-subheading"
@@ -430,6 +456,8 @@ export default function Home(props) {
                   Email:
                 </label>
                 <input
+                  id="givEmail"
+                  name="givEmail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full border-subheading"
@@ -443,6 +471,8 @@ export default function Home(props) {
                 </label>
                 <br />
                 <textarea
+                  id="givMessage"
+                  name="givMessage"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full text-subheading"
@@ -450,7 +480,7 @@ export default function Home(props) {
               </div>
               <input
                 onClick={() => {
-                  setToSubmit(true);
+                  funcContactUs();
                 }}
                 className="w-full h-10 bg-blue-500 rounded-full text-white uppercase"
                 type="submit"
