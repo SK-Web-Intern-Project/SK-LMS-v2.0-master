@@ -3,6 +3,8 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FacebookIcon, FacebookShareButton } from "react-share";
+import { TwitterIcon, TwitterShareButton } from "react-share";
+import { LinkedinIcon, LinkedinShareButton } from "react-share";
 import ArticleCarouselLayout from "../../components/ArticlesCarousel/ArticleCarouselLayout";
 import Footer from "../../components/Footer";
 import LoginModal from "../../components/HomePage/LoginModal";
@@ -100,9 +102,18 @@ export default function StockKnowledgeAtRISE(props) {
         <div className="xl:w-1/4 lg:w-1/4 md:w-1/4 reno:w-1/4 sm:w-full xs:w-full">
           <p>Share this article</p>
           <div className="w-full h-10 flex items-center text-blue space-x-2">
-            <FacebookShareButton url="http://localhost:3000/articles/stock-knowledge-at-rise">
+            <FacebookShareButton url="https://facebook.com/stockknowledge_">
               <FacebookIcon size={36} />
             </FacebookShareButton>
+
+            <TwitterShareButton url = "https://twitter.com/stockknowledge_">
+              <TwitterIcon size = {36} />
+            </TwitterShareButton>
+
+            <LinkedinShareButton url = "https://www.linkedin.com/company/stock-knowledge/">
+              <LinkedinIcon size = {36} />
+            </LinkedinShareButton>
+            
           </div>
         </div>
         <div className="xl:w-11/12 lg:w-11/12 md:w-11/12 reno:w-11/12 sm:w-full xs:w-full leading-relaxed">
