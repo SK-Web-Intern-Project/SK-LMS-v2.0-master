@@ -2,7 +2,6 @@ This repo contains LMS that can host webXR contents
 
 # Set-up a local copy
 
-
 ### Install NodeJS First
 
 Head over to [NodeJS official website](https://nodejs.org).
