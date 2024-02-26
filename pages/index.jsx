@@ -425,7 +425,7 @@ export default function Home(props) {
 
               <img className="ml-10 mr-5 mb-5 w-28 transform hover:bg-transparent transition duration-500 hover:scale-105" 
                 alt="World Economic Forum" 
-                src="/images/partners/UE.png" />          
+                src="/images/partners/ue.png" />          
 
               <img className="ml-10 mr-5 mb-5 w-28 transform hover:bg-transparent transition duration-500 hover:scale-105" 
                 alt="World Economic Forum" 
