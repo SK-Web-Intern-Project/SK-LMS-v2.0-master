@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+		"deploy": "npm run build && rsync --exclude=.git -azP . ubuntu@47.128.188.150:/home/ubuntu/apps/qalms2",
+		"dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
